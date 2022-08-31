@@ -5,7 +5,9 @@ This project uses [UiPath](https://uipath.com) as it's core automation platform 
 
 ## Resources
 [UiPath Academy](https://academy.uipath.com) - Learn how the UiPath Platform can be used for Automation
+
 [Name Generator Fun](https://namegeneratorfun.com) - Website used for generating names
+
 [QR Code Generator](https://goqr.me) - Website/API used for generating QR Codes
 
 # Project
