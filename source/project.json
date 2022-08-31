@@ -1,6 +1,6 @@
 {
   "name": "Name Generator",
-  "description": "Blank Process",
+  "description": "This automation will go the a name generator website and scrape random and custom names if necessary. This project was created to provide middle school aged students a 3-4 minute exposure to building a Robotic Process Automation Robot in a conference setting. Code customizations are to be made in the Interactive Changes.xaml file.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
