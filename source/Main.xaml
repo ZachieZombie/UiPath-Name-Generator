@@ -1,0 +1,447 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1131,4816" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ufa="clr-namespace:UiPath.Form.Activities;assembly=UiPath.Form.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Form.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Generate Name" sap:VirtualizedContainerService.HintSize="688,4751" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(Of String) from {&quot;Male&quot;, &quot;Female&quot;, &quot;Neutral&quot;}]" Name="genderDropdown" />
+      <Variable x:TypeArguments="x:Boolean" Name="useRandomName" />
+      <Variable x:TypeArguments="x:String" Name="firstName" />
+      <Variable x:TypeArguments="x:String" Name="lastName" />
+      <Variable x:TypeArguments="x:String" Name="nameType" />
+      <Variable x:TypeArguments="x:String" Name="customNameGeneratorURL" />
+      <Variable x:TypeArguments="x:String" Name="generatedName" />
+      <Variable x:TypeArguments="x:String" Name="generatedNameDescription" />
+      <Variable x:TypeArguments="x:String" Name="gender" />
+      <Variable x:TypeArguments="x:String" Name="randomNameGeneratorURL" />
+      <Variable x:TypeArguments="njl:JObject" Name="configJson" />
+      <Variable x:TypeArguments="x:String" Name="button" />
+      <Variable x:TypeArguments="x:Int32" Name="screenHeight" />
+      <Variable x:TypeArguments="x:Int32" Name="screenWidth" />
+      <Variable x:TypeArguments="x:Int32" Name="formHeight" />
+      <Variable x:TypeArguments="x:Int32" Name="formWidth" />
+      <Variable x:TypeArguments="x:Int32" Name="chromeHeight" />
+      <Variable x:TypeArguments="x:Int32" Name="chromeWidth" />
+      <Variable x:TypeArguments="x:Int32" Name="chromeXPosition" />
+      <Variable x:TypeArguments="x:Int32" Name="chromeYPosition" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="formXPosition" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="formYPosition" />
+      <Variable x:TypeArguments="x:String" Name="eventName" />
+      <Variable x:TypeArguments="x:String" Name="qrCodeURL" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="646,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Name Generator - Started&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Interactive Changes workflow" sap:VirtualizedContainerService.HintSize="646,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Interactive Changes.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="nameType">[nameType]</OutArgument>
+        <OutArgument x:TypeArguments="x:Boolean" x:Key="useRandomName">[useRandomName]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="gender">[gender]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <Sequence DisplayName="Read Configuration" sap:VirtualizedContainerService.HintSize="646,2264" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="configText" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[nameType]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[nameType.ToUpper]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:ReadTextFile File="{x:Null}" Content="[configText]" DisplayName="Read Text File" FileName=".\Data\config.json" sap:VirtualizedContainerService.HintSize="434,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+        <Assign.To>
+          <OutArgument x:TypeArguments="njl:JObject">[configJson]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="njl:JObject">[JObject.Parse(configText)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[customNameGeneratorURL]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[configJson("NameTypes")(nameType)("URL").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[randomNameGeneratorURL]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[configJson("RandomNameGeneratorURL").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+        <Assign.To>
+          <OutArgument x:TypeArguments="scg:List(x:String)">[genderDropdown]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="scg:List(x:String)">[JsonConvert.DeserializeObject(Of List(Of String))(configJson("NameTypes")(nameType)("Genders").ToString)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[gender]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[genderDropdown.Item(0)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[eventName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[configJson("EventName").ToString]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[screenHeight]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Height]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[screenWidth]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[System.Windows.Forms.Screen.PrimaryScreen.WorkingArea.Width]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[formHeight]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[screenHeight - 50]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[formWidth]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(configJson("FormWidth"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[formXPosition]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(configJson("FormXPosition"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[formYPosition]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(configJson("FormYPosition"))]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[chromeHeight]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[screenHeight]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[chromeWidth]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[screenWidth - Convert.ToInt32(formWidth * 1.1)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[chromeXPosition]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[formXPosition + Convert.ToInt32(formWidth * 1.1)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[chromeYPosition]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[formYPosition]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Trace" Message="[&quot;Screen Info:&quot; + vbNewline + vbTab + &quot;Width: &quot; + screenWidth.ToString + vbNewLine + vbTab + &quot;Height: &quot; + screenHeight.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[&quot;Form Window Info:&quot; + vbNewline + vbTab + &quot;Width: &quot; + formWidth.ToString + vbNewLine + vbTab + &quot;Height: &quot; + formHeight.ToString + vbNewLine + vbTab + &quot;X: &quot; + formXPosition.ToString + vbNewLine + vbTab + &quot;Y: &quot; + formYPosition.ToString]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace" Message="[&quot;Chrome Window Info:&quot; + vbNewline + vbTab + &quot;Width: &quot; + chromeWidth.ToString + vbNewLine + vbTab + &quot;Height: &quot; + chromeHeight.ToString + vbNewLine + vbTab + &quot;X: &quot; + chromeXPosition.ToString + vbNewLine + vbTab + &quot;Y: &quot; + chromeYPosition.ToString]" />
+    </Sequence>
+    <Sequence DisplayName="Get Required User Input" sap:VirtualizedContainerService.HintSize="646,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <Literal x:TypeArguments="x:String" Value="" />
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <ufa:FormActivity CreateFormActivityFileName="{x:Null}" CreateFormActivityFilePath="{x:Null}" Dismissed="{x:Null}" FormFieldsInputData="{x:Null}" FormFieldsOutputData="{x:Null}" IconPath="{x:Null}" LocalCSSFilePath="{x:Null}" TimeoutInSeconds="{x:Null}" CreateFormId="e27245cd-0cda-44b3-89fd-49f011ed4cf0" DisableMaximizeButton="True" DisableMinimizeButton="True" DisableSanitize="False" DisplayName="Create Form" FormHeight="[formHeight]" FormSchema="%[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;title&quot;:&quot;Input Data&quot;,&quot;theme&quot;:&quot;primary&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;inputData&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Use Random Name&quot;,&quot;tableView&quot;:false,&quot;defaultValue&quot;:false,&quot;key&quot;:&quot;useRandomName&quot;,&quot;type&quot;:&quot;checkbox&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Gender&quot;,&quot;widget&quot;:&quot;choicesjs&quot;,&quot;tableView&quot;:true,&quot;valueProperty&quot;:&quot;value&quot;,&quot;validate&quot;:{&quot;select&quot;:false},&quot;key&quot;:&quot;gender&quot;,&quot;type&quot;:&quot;select&quot;,&quot;mask&quot;:false,&quot;alwaysEnabled&quot;:false,&quot;input&quot;:true,&quot;reorder&quot;:false,&quot;lazyLoad&quot;:false,&quot;disableLimit&quot;:false,&quot;reference&quot;:false},{&quot;label&quot;:&quot;First Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;firstName&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;Read-Only&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;simple&quot;,&quot;simple&quot;:{&quot;show&quot;:true,&quot;when&quot;:&quot;useRandomName&quot;,&quot;eq&quot;:&quot;true&quot;}},&quot;actions&quot;:[{&quot;name&quot;:&quot;Disable&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Disabled&quot;,&quot;value&quot;:&quot;disabled&quot;,&quot;type&quot;:&quot;boolean&quot;},&quot;state&quot;:true,&quot;isRowSelected&quot;:true}]}],&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Last Name&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;lastName&quot;,&quot;customConditional&quot;:&quot;disabled = (data.useRandomName === true)&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;Read-only&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;simple&quot;,&quot;simple&quot;:{&quot;show&quot;:true,&quot;when&quot;:&quot;useRandomName&quot;,&quot;eq&quot;:&quot;true&quot;}},&quot;actions&quot;:[{&quot;name&quot;:&quot;Disable&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Disabled&quot;,&quot;value&quot;:&quot;disabled&quot;,&quot;type&quot;:&quot;boolean&quot;},&quot;state&quot;:true}]}],&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6},{&quot;components&quot;:[{&quot;title&quot;:&quot;Output Data&quot;,&quot;theme&quot;:&quot;success&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;outputData&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;Hide Until Output Available&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;javascript&quot;,&quot;javascript&quot;:&quot;result = (!data.generatedName);\nreturn result;&quot;},&quot;actions&quot;:[{&quot;name&quot;:&quot;Hide&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Hidden&quot;,&quot;value&quot;:&quot;hidden&quot;,&quot;type&quot;:&quot;boolean&quot;},&quot;state&quot;:true}]}],&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Table&quot;,&quot;cellAlignment&quot;:&quot;left&quot;,&quot;key&quot;:&quot;table1&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:1,&quot;numCols&quot;:2,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;title&quot;:&quot;{{data.nameType}} NAME&quot;,&quot;theme&quot;:&quot;info&quot;,&quot;collapsible&quot;:false,&quot;key&quot;:&quot;nameType&quot;,&quot;type&quot;:&quot;panel&quot;,&quot;label&quot;:&quot;Panel&quot;,&quot;redrawOn&quot;:&quot;data&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;components&quot;:[{&quot;label&quot;:&quot;Generated Name&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;generatedName&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true,&quot;redrawOn&quot;:&quot;data&quot;},{&quot;label&quot;:&quot;Description&quot;,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;generatedNameDescription&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:10,&quot;input&quot;:true}]}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;HTML&quot;,&quot;tag&quot;:&quot;div&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;style&quot;,&quot;value&quot;:&quot;text-align: center&quot;}],&quot;content&quot;:&quot;&lt;img src={{data.qrCodeURL}} alt=\&quot;QR Code\&quot; height=200 width=200 /&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;qrCodeURL&quot;,&quot;logic&quot;:[{&quot;name&quot;:&quot;Hide if Data Unavailable&quot;,&quot;trigger&quot;:{&quot;type&quot;:&quot;javascript&quot;,&quot;javascript&quot;:&quot;result = (!data.qrCodeURL);\nreturn result;&quot;},&quot;actions&quot;:[{&quot;name&quot;:&quot;Hide&quot;,&quot;type&quot;:&quot;property&quot;,&quot;property&quot;:{&quot;label&quot;:&quot;Hidden&quot;,&quot;value&quot;:&quot;hidden&quot;,&quot;type&quot;:&quot;boolean&quot;},&quot;state&quot;:true}]}],&quot;type&quot;:&quot;htmlelement&quot;,&quot;redrawOn&quot;:&quot;data&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false}]}]]}]}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;,&quot;currentWidth&quot;:6}],&quot;autoAdjust&quot;:true,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;label&quot;:&quot;Table&quot;,&quot;cellAlignment&quot;:&quot;left&quot;,&quot;bordered&quot;:true,&quot;key&quot;:&quot;table&quot;,&quot;type&quot;:&quot;table&quot;,&quot;numRows&quot;:2,&quot;numCols&quot;:2,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;rows&quot;:[[{&quot;components&quot;:[{&quot;label&quot;:&quot;Generate Random Name&quot;,&quot;action&quot;:&quot;custom&quot;,&quot;block&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;generateRandomName&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;isResetData&quot;:false,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;showUpdateData&quot;:false}]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Generate Custom Name&quot;,&quot;action&quot;:&quot;custom&quot;,&quot;block&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;generateCustomName&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;isResetData&quot;:false,&quot;showUpdateData&quot;:false,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]}],[{&quot;components&quot;:[]},{&quot;components&quot;:[{&quot;label&quot;:&quot;Cancel&quot;,&quot;theme&quot;:&quot;danger&quot;,&quot;block&quot;:true,&quot;tableView&quot;:false,&quot;key&quot;:&quot;cancel&quot;,&quot;custom&quot;:&quot;instance.emit('executeDoBlock', instance.component);&quot;,&quot;isResetData&quot;:false,&quot;saveOnEnter&quot;:false,&quot;input&quot;:true,&quot;type&quot;:&quot;button&quot;}]}]]}]" FormTheme="{}{&quot;Activities&quot;:[&quot;FORMS&quot;],&quot;Id&quot;:&quot;100250&quot;,&quot;Name&quot;:&quot;Space Lab&quot;,&quot;BaseCss&quot;:&quot;../../assets/css/themes/spacelab.bootstrap.min.css&quot;,&quot;ImageSrc&quot;:&quot;../../assets/themeicons/spacelab.png&quot;,&quot;OverrideCssUrl&quot;:&quot;&quot;,&quot;UserStyleOverrides&quot;:&quot;&quot;,&quot;Properties&quot;:&quot;&quot;,&quot;IsCustomTheme&quot;:false,&quot;Version&quot;:1,&quot;ThemeVersion&quot;:1}" FormTitle="Name Generator" FormWidth="[formWidth]" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="646,1835" sap2010:WorkflowViewState.IdRef="FormActivity_1" IsReadOnly="False" MaxColumnsForSchemaGeneration="6" RunDoBlockFirst="False" RunInIsolatedMode="False" SelectedButton="[button]" StartAsMinimized="False" WindowPositionLeft="[formXPosition]" WindowPositionTop="[formYPosition]">
+      <ufa:FormActivity.Body>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,1709" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="eventDescription" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="566,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Button Clicked: &quot; + button]" />
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[button]" sap:VirtualizedContainerService.HintSize="566,1486" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+              <Sequence x:Key="generateRandomName" DisplayName="Get Random Name if Required" sap:VirtualizedContainerService.HintSize="526,483" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[useRandomName]" DisplayName="If Random Name Required Generate It" sap:VirtualizedContainerService.HintSize="484,391" sap2010:WorkflowViewState.IdRef="If_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get Random Name workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Get Random Name.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="i_randomNameURL">[randomNameGeneratorURL]</InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="o_firstName">[firstName]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="o_lastName">[lastName]</OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="i_gender">[gender]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeHeight">[chromeHeight]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeWidth">[chromeWidth]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeX">[chromeXPosition]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeY">[chromeYPosition]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+              </Sequence>
+              <Sequence x:Key="generateCustomName" DisplayName="Go To Website &amp; Generate Name" sap:VirtualizedContainerService.HintSize="526,1280" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[String.IsNullOrEmpty(firstName) or String.IsNullOrEmpty(lastName)]" sap:VirtualizedContainerService.HintSize="484,391" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,204" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get Random Name workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Get Random Name.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="i_randomNameURL">[randomNameGeneratorURL]</InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="o_firstName">[firstName]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="o_lastName">[lastName]</OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="i_gender">[gender]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeHeight">[chromeHeight]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeWidth">[chromeWidth]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeX">[chromeXPosition]</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeY">[chromeYPosition]</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Input Data: &quot; + Environment.NewLine + &quot;    Gender: &quot; + gender + Environment.NewLine + &quot;    First Name: &quot; + firstName + Environment.NewLine + &quot;    Last Name: &quot; + lastName]" />
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get Generated Name workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Get Generated Name.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_nameGeneratorURL">[customNameGeneratorURL]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_firstName">[firstName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_lastName">[lastName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_gender">[gender]</InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="o_generatedName">[generatedName]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="o_generatedNameDescription">[generatedNameDescription]</OutArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeWidth">[chromeWidth]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeHeight">[chromeHeight]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeX">[chromeXPosition]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="i_chromeY">[chromeYPosition]</InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Output Data: &quot; + Environment.NewLine + &quot;    Generated Name: &quot; + generatedName + Environment.NewLine + &quot;    Generated Name Description: &quot; + generatedNameDescription]" />
+                <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[eventDescription]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[nameType + " NAME: " + generatedName + Environment.NewLine + "DESCRIPTION: " + generatedNameDescription + Environment.NewLine + Environment.NewLine + "RANDOM NAME GENERATOR: " + randomNameGeneratorURL + Environment.NewLine + nameType + " NAME GENERATOR: " + customNameGeneratorURL]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get QR Code URL workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Get QR Code URL.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_eventName">[eventName]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="i_description">[eventDescription]</InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="o_qrCodeURL">[qrCodeURL]</OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Trace" Message="[&quot;QR Code URL: &quot; + qrCodeURL]" />
+              </Sequence>
+            </Switch>
+          </Sequence>
+        </ActivityAction>
+      </ufa:FormActivity.Body>
+      <ufa:FormActivity.DelayBody>
+        <ActivityAction x:TypeArguments="scg:Dictionary(x:String, x:Object)">
+          <Delay Duration="00:00:00.2500000" sap2010:WorkflowViewState.IdRef="Delay_1" />
+        </ActivityAction>
+      </ufa:FormActivity.DelayBody>
+      <ufa:FormActivity.FormFieldsCollection>
+        <InOutArgument x:TypeArguments="x:String" x:Key="gender">[gender]</InOutArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="gender_dropdown">[genderDropdown]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="firstName">[firstName]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="lastName">[lastName]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:Boolean" x:Key="useRandomName">[useRandomName]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="generatedName">[generatedName]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="generatedNameDescription">[generatedNameDescription]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="nameType">[nameType]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="qrCodeURL">[qrCodeURL]</InOutArgument>
+      </ufa:FormActivity.FormFieldsCollection>
+    </ufa:FormActivity>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="646,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Name Generator - Completed&quot;]" />
+  </Sequence>
+</Activity>

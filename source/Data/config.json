@@ -1,0 +1,73 @@
+{
+    "FormWidth": 600,
+    "FormXPosition": 1,
+    "FormYPosition": 1,
+    "EventName": "Event Name",
+    "RandomNameGeneratorURL": "https://www.namegeneratorfun.com/",
+    "NameTypes": {
+        "UNICORN": {
+            "URL": "https://www.namegeneratorfun.com/unicorn",
+            "Genders": ["Male", "Female"]
+        },
+        "DRAGON": {
+            "URL": "https://www.namegeneratorfun.com/dragon",
+            "Genders": ["Male", "Female", "Neutral"]
+        },
+        "CHRISTMAS ELF": {
+            "URL": "https://www.namegeneratorfun.com/christmas-elf",
+            "Genders": ["Male", "Female"]
+        },
+        "DWARF": {
+            "URL": "https://www.namegeneratorfun.com/dwarf",
+            "Genders": ["Male", "Female"]
+        },
+        "FAIRY": {
+            "URL": "https://www.namegeneratorfun.com/fairy",
+            "Genders": ["Male", "Female", "Neutral"]
+        },
+        "FAIRY TALE": {
+            "URL": "https://www.namegeneratorfun.com/fairy-tale",
+            "Genders": ["Male", "Female", "Neutral"]
+        },
+        "HOBBIT": {
+            "URL": "https://www.namegeneratorfun.com/hobbit",
+            "Genders": ["Male", "Female"]
+        },
+        "MERMAID": {
+            "URL": "https://www.namegeneratorfun.com/mermaid",
+            "Genders": ["Male", "Female"]
+        },
+        "PIRATE": {
+            "URL": "https://www.namegeneratorfun.com/pirate",
+            "Genders": ["Male", "Female"]
+        },
+        "MY LITTLE PONY": {
+            "URL": "https://www.namegeneratorfun.com/pony",
+            "Genders": ["Male", "Female"]
+        },
+        "REINDEER": {
+            "URL": "https://www.namegeneratorfun.com/reindeer",
+            "Genders": ["Male", "Female"]
+        },
+        "VAMPIRE": {
+            "URL": "https://www.namegeneratorfun.com/vampire",
+            "Genders": ["Male", "Female"]
+        },
+        "WEREWOLF": {
+            "URL": "https://www.namegeneratorfun.com/werewolf",
+            "Genders": ["Male", "Female", "Neutral"]
+        },
+        "WITCH": {
+            "URL": "https://www.namegeneratorfun.com/witch",
+            "Genders": ["Male", "Female"]
+        },
+        "SUPERHERO": {
+            "URL": "https://www.namegeneratorfun.com/superhero",
+            "Genders": ["Male", "Female", "Neutral"]
+        },
+        "SCIFI": {
+            "URL": "https://www.namegeneratorfun.com/scifi",
+            "Genders": ["Male", "Female", "Neutral"]
+        }
+    }
+}
