@@ -209,7 +209,7 @@
           <OutArgument x:TypeArguments="x:Int32">[formHeight]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:Int32">[screenHeight - 200]</InArgument>
+          <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(Convert.ToDouble(screenHeight) * 0.8)]</InArgument>
         </Assign.Value>
       </Assign>
       <Assign sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_13">
@@ -418,7 +418,7 @@
                     <OutArgument x:TypeArguments="x:String">[eventDescription]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[nameType + " NAME: " + generatedName + Environment.NewLine + "DESCRIPTION: " + generatedNameDescription + Environment.NewLine + Environment.NewLine + "RANDOM NAME GENERATOR: " + randomNameGeneratorURL + Environment.NewLine + nameType + "NAME GENERATOR: " + customNameGeneratorURL + Environment.NewLine + "GITHUB: " + githubRepoURL]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[nameType + " NAME: " + generatedName + Environment.NewLine + "DESCRIPTION: " + generatedNameDescription + Environment.NewLine + Environment.NewLine + "RANDOM NAME GENERATOR: " + randomNameGeneratorURL + Environment.NewLine + nameType + "NAME GENERATOR: " + customNameGeneratorURL + "GITHUB: " + githubRepoURL]</InArgument>
                   </Assign.Value>
                 </Assign>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get QR Code URL workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Get QR Code URL.xaml">
