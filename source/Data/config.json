@@ -4,6 +4,7 @@
     "FormYPosition": 1,
     "EventName": "Event Name",
     "RandomNameGeneratorURL": "https://www.namegeneratorfun.com/",
+    "GithubRepoURL": "https://github.com/ZachieZombie/UiPath-Name-Generator",
     "NameTypes": {
         "UNICORN": {
             "URL": "https://www.namegeneratorfun.com/unicorn",
