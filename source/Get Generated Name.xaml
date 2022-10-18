@@ -14,7 +14,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1131,2912</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,4425</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Get_Generated_Name_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -82,7 +82,7 @@
       <AssemblyReference>NPOI</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Generated_Name" sap:VirtualizedContainerService.HintSize="686,2847" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Generated_Name" sap:VirtualizedContainerService.HintSize="686,4360" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="male" Name="gender" />
     </Sequence.Variables>
@@ -100,13 +100,13 @@
         <InArgument x:TypeArguments="x:String">[i_gender.ToLower]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="644,2393" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[i_nameGeneratorURL]">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="644,3906" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[i_nameGeneratorURL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="610,2292" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="610,3805" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="ResultData" />
               <Variable x:TypeArguments="x:Boolean" Name="personalizeRadialExists" />
@@ -120,19 +120,31 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[window]" DisplayName="Attach Window 'chrome.exe Name'" sap:VirtualizedContainerService.HintSize="568,260" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="f620c6235ccd44972a330b0d1af45628" Selector="&lt;wnd app='chrome.exe' title='*Name Generator*' /&gt;">
+            <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[window]" DisplayName="Attach Window 'chrome.exe Name'" sap:VirtualizedContainerService.HintSize="568,386" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="f620c6235ccd44972a330b0d1af45628" Selector="&lt;wnd app='chrome.exe' title='*Name Generator*' /&gt;">
               <ui:WindowScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,240" sap2010:WorkflowViewState.IdRef="Sequence_19">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:MoveWindow DisplayName="Move Window" Height="[i_chromeHeight]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MoveWindow_1" Width="[i_chromeWidth]" Window="[window]" X="[i_chromeX]" Y="[i_chromeY]" />
+                    <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="Activate_1">
+                      <ui:Activate.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d49ae426-8806-4abe-9258-b38d9616a1e8">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Activate.Target>
+                    </ui:Activate>
+                    <ui:MoveWindow DisplayName="Move Window" Height="[i_chromeHeight]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MoveWindow_1" Width="[i_chromeWidth]" Window="[window]" X="[i_chromeX]" Y="[i_chromeY]" />
                   </Sequence>
                 </ActivityAction>
               </ui:WindowScope.Body>
@@ -192,20 +204,20 @@
                 </If.Else>
               </If>
             </Sequence>
-            <Sequence DisplayName="Fill Out Form" sap:VirtualizedContainerService.HintSize="568,921" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Fill Out Form" sap:VirtualizedContainerService.HintSize="568,2308" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Personalize Radial" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence DisplayName="Personalize Radial" sap:VirtualizedContainerService.HintSize="526,510" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="Personalize Radial Exists" Exists="[personalizeRadialExists]" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                <ui:UiElementExists DisplayName="Personalize Radial Exists" Exists="[personalizeRadialExists]" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8059b4f2-bddd-45b3-8bca-bb4ddb23a45f" Selector="&lt;html app='chrome.exe' title='*Name Generator' /&gt;&lt;webctrl id='personalised' tag='INPUT' type='radio' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -217,15 +229,15 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[personalizeRadialExists]" DisplayName="If Personalize Radial Exists Click It" sap:VirtualizedContainerService.HintSize="484,293" sap2010:WorkflowViewState.IdRef="If_2">
+                <If Condition="[personalizeRadialExists]" DisplayName="If Personalize Radial Exists Click It" sap:VirtualizedContainerService.HintSize="484,292" sap2010:WorkflowViewState.IdRef="If_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Personalize Radial" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" CursorMotionType="Smooth" DisplayName="Click Personalize Radial" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition OffsetX="7" OffsetY="9" Position="TopLeft" />
                       </ui:Click.CursorPosition>
@@ -249,14 +261,14 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence DisplayName="First Name" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="First Name" sap:VirtualizedContainerService.HintSize="526,538" sap2010:WorkflowViewState.IdRef="Sequence_16">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="First Name Exists" Exists="[firstNameExists]" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                <ui:UiElementExists DisplayName="First Name Exists" Exists="[firstNameExists]" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52d8aaaa-7861-4512-b412-58ec0d31753c" Selector="&lt;html app='chrome.exe' title='*Name Generator' /&gt;&lt;webctrl id='firstName' tag='INPUT' type='text' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -268,15 +280,15 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[firstNameExists]" DisplayName="If First Name Exists Enter It" sap:VirtualizedContainerService.HintSize="484,321" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[firstNameExists]" DisplayName="If First Name Exists Enter It" sap:VirtualizedContainerService.HintSize="484,320" sap2010:WorkflowViewState.IdRef="If_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Enter First Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[i_firstName]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enter First Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[i_firstName]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a51fa341-5f42-434a-a4f9-ce4e3c92b72d" InformativeScreenshot="a8102835b6f4d7c0f545d5176f491599" Selector="&lt;html app='chrome.exe' title='*Name Generator' /&gt;&lt;webctrl id='firstName' tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
                           <ui:Target.TimeoutMS>
@@ -297,14 +309,14 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence DisplayName="Last Name" sap:VirtualizedContainerService.HintSize="526,66" sap2010:WorkflowViewState.IdRef="Sequence_17">
+              <Sequence DisplayName="Last Name" sap:VirtualizedContainerService.HintSize="526,538" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="Last Name Exists" Exists="[lastNameExists]" sap:VirtualizedContainerService.HintSize="334,86" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                <ui:UiElementExists DisplayName="Last Name Exists" Exists="[lastNameExists]" sap:VirtualizedContainerService.HintSize="484,86" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52d8aaaa-7861-4512-b412-58ec0d31753c" Selector="&lt;html app='chrome.exe' title='*Name Generator' /&gt;&lt;webctrl id='lastName' tag='INPUT' type='text' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -316,15 +328,15 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[lastNameExists]" DisplayName="If Last Name Exists Enter It" sap:VirtualizedContainerService.HintSize="484,321" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[lastNameExists]" DisplayName="If Last Name Exists Enter It" sap:VirtualizedContainerService.HintSize="484,320" sap2010:WorkflowViewState.IdRef="If_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Enter Last Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[i_lastName]">
+                    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Enter Last Name" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="True" Text="[i_lastName]">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="447c77dd-c4f6-4827-b464-40cc6282f5e2" InformativeScreenshot="a0b968a2dd4dd0d75647edf057394586" Selector="&lt;html app='chrome.exe' title='*Name Generator' /&gt;&lt;webctrl id='lastName' tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
                           <ui:Target.TimeoutMS>
@@ -345,7 +357,7 @@
                   </If.Else>
                 </If>
               </Sequence>
-              <Sequence DisplayName="Gender Radial" sap:VirtualizedContainerService.HintSize="526,511" sap2010:WorkflowViewState.IdRef="Sequence_18">
+              <Sequence DisplayName="Gender Radial" sap:VirtualizedContainerService.HintSize="526,510" sap2010:WorkflowViewState.IdRef="Sequence_18">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -361,9 +373,9 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[genderRadialExists]" DisplayName="If Gender Radial Exists Select It" sap:VirtualizedContainerService.HintSize="484,293" sap2010:WorkflowViewState.IdRef="If_5">
+                <If Condition="[genderRadialExists]" DisplayName="If Gender Radial Exists Select It" sap:VirtualizedContainerService.HintSize="484,292" sap2010:WorkflowViewState.IdRef="If_5">
                   <If.Then>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Select Gender Radial" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" CursorMotionType="Smooth" DisplayName="Select Gender Radial" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition OffsetX="5" OffsetY="10" Position="TopLeft" />
                       </ui:Click.CursorPosition>
@@ -388,7 +400,7 @@
                 </If>
               </Sequence>
             </Sequence>
-            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click Generate Button" sap:VirtualizedContainerService.HintSize="568,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" CursorMotionType="Smooth" DelayMS="1000" DisplayName="Click Generate Button" sap:VirtualizedContainerService.HintSize="568,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
               <ui:Click.CursorPosition>
                 <ui:CursorPosition OffsetX="43" OffsetY="11" Position="TopLeft" />
               </ui:Click.CursorPosition>
@@ -400,7 +412,7 @@
                 </ui:Target>
               </ui:Click.Target>
             </ui:Click>
-            <TryCatch DisplayName="Try Catch - Parse Results" sap:VirtualizedContainerService.HintSize="438,625" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch - Parse Results" sap:VirtualizedContainerService.HintSize="568,625" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <Sequence DisplayName="Parse Results" sap:VirtualizedContainerService.HintSize="376,398" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
@@ -452,11 +464,11 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+            <ui:CloseTab Browser="{x:Null}" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="568,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
           </Sequence>
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="514,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Get Generated Name - Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="644,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Get Generated Name - Completed&quot;]" />
   </Sequence>
 </Activity>
