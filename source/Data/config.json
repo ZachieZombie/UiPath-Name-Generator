@@ -1,8 +1,8 @@
-{
+﻿{
     "FormWidth": 600,
     "FormXPosition": 1,
     "FormYPosition": 1,
-    "EventName": "Event Name",
+    "EventName": "WoW 2024",
     "RandomNameGeneratorURL": "https://www.namegeneratorfun.com/",
     "GithubRepoURL": "https://github.com/ZachieZombie/UiPath-Name-Generator",
     "NameTypes": {

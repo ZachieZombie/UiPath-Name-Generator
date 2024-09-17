@@ -1,10 +1,11 @@
 {
   "name": "Name Generator",
+  "projectId": "974757c4-64ad-4f60-bdc0-dee2a9e0babb",
   "description": "This automation will go the a name generator website and scrape random and custom names if necessary. This project was created to provide middle school aged students a 3-4 minute exposure to building a Robotic Process Automation Robot in a conference setting. Code customizations are to be made in the Interactive Changes.xaml file.",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
-    "UiPath.Form.Activities": "[1.9.6]",
+    "UiPath.Form.Activities": "[2.0.7]",
     "UiPath.Mail.Activities": "[1.15.2]",
     "UiPath.System.Activities": "[22.4.4]",
     "UiPath.UIAutomation.Activities": "[22.4.7]"
@@ -21,6 +22,7 @@
     "isAttended": true,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -28,7 +30,8 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -41,7 +44,7 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
