@@ -1,5 +1,8 @@
-.cache/
-.props/
-.backup/
-.local/
-.settings/
+*/.cache/*
+*/.props/*
+*/.backup/*
+*/.local/*
+*/.settings/*
+*/.objects/*
+*/.project/*
+*/.tmh/*
